@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;700&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
 body {
-    height: 100vh;
     box-sizing: border-box;
     background-color: black;
     color: white;
     /*cor p strong #68E21A*/
+}
+.cabecalho{
+    display: flex;
+    padding-top: 3%;
+    padding-left: 20%;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    color: rgb(13, 182, 239);
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
 }
 .titulo-destaque{
     color: rgb(13, 182, 239);
@@ -17,8 +32,12 @@ body {
 .habilidades-destaque{
     color: rgb(4, 128, 170);
 }
-.apresentacao__links__site{
-    background-color: black;
+.apresentacao__links__site{  
+    /*  background-color: black; */
+    will-change: transform;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     width: 378px;
     text-align: center;
     border: 2px solid #22D4FD;
@@ -33,17 +52,18 @@ body {
     cursor: pointer;
 }
 .apresentacao__links__site:hover{
-    transition: 500ms;
-    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #0F0E0E;
+    transform: scale(1.03);
 }
 .apresentacao{
-    margin: 10% 18%;
+    padding: 2% 20% 9.5% 20%;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    gap: 8%;
 }
 .apresentacao__conteudo{
-    width: 615px;
+    width: 49%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -59,16 +79,25 @@ body {
 .apresentacao__links{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 32px;
 }
 .apresentacao__links__texto{
-    font-family: Krona One;
+    font-family: 'Krona One';
     font-size: 24px;
-    font-style: normal;
     font-weight: 400;
 }
-img{
-    display: flex;
+.img__grande{
     padding-block-end: 100px;
+}
+.rodape{
+    color: #0F0E0E;
+    background-color: rgb(13, 182, 239);
+    margin-top: 1.2%;
+    padding:24px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
 }
