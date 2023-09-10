@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;700&display=swap');
 
+:root{
+    --bg-color: black;
+}
 *{
     margin: 0;
     padding: 0;
 }
 body {
     box-sizing: border-box;
-    background-color: black;
+    background-color: var(--bg-color);
     color: white;
     /*cor p strong #68E21A*/
+}
+#sobre-mim{
+    padding-left: 12%;
 }
 .cabecalho{
     display: flex;
@@ -19,15 +25,27 @@ body {
     display: flex;
     gap: 80px;
 }
+#sobre-mim__link{
+    color: rgb(255, 52, 52);
+}
 .cabecalho__menu__link{
     color: rgb(13, 182, 239);
     font-family: 'Montserrat';
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
+    transition: 500ms;
+    cursor: pointer;
+}
+.cabecalho__menu__link:hover{
+    transition: 500ms;
+    text-decoration: underline;
 }
 .titulo-destaque{
     color: rgb(13, 182, 239);
+}
+.strong-flamengo{
+    color: rgb(255, 52, 52);
 }
 .habilidades-destaque{
     color: rgb(4, 128, 170);
@@ -56,8 +74,11 @@ body {
     background-color: #0F0E0E;
     transform: scale(1.03);
 }
+#about{
+    padding: 3.5% 6% 5% 12%;
+}
 .apresentacao{
-    padding: 2% 20% 9.5% 20%;
+    padding: 3.5% 15% 9% 20%;
     display: flex;
     align-items: center;
     gap: 8%;
@@ -72,9 +93,13 @@ body {
     font-size: 36px;
     font-family: 'Krona One', sans-serif;
 }
+#flamengo{
+    font-size: 20px;
+}
 .apresentacao__conteudo__texto{
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 .apresentacao__links{
     display: flex;
@@ -92,12 +117,19 @@ body {
     padding-block-end: 100px;
 }
 .rodape{
-    color: #0F0E0E;
-    background-color: rgb(13, 182, 239);
-    margin-top: 1.2%;
-    padding:24px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(226, 222, 213);
+    background-color: #0F0E0E;
+    padding: 0.8%;
     text-align: center;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 400;
+}
+.img__flamengo{
+    width: 35%;
+    height: 600px;
 }
