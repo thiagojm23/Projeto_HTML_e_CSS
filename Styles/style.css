@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;700&display=swap');
 
 :root{
-    --bg-color: black;
+    --bg-color: #20262E;
+    --cor-primaria: #F8F0E5;
+    --cor-secundaria: #FA7070;
+    --cor-terciaria: #61677A;
+    --cor-quaternaria: #FF6969;
 }
 *{
     margin: 0;
@@ -10,7 +14,7 @@
 body {
     box-sizing: border-box;
     background-color: var(--bg-color);
-    color: white;
+    color: var(--cor-primaria);
     /*cor p strong #68E21A*/
 }
 #sobre-mim{
@@ -29,7 +33,7 @@ body {
     color: rgb(255, 52, 52);
 }
 .cabecalho__menu__link{
-    color: rgb(13, 182, 239);
+    color: var(--cor-secundaria);
     font-family: 'Montserrat';
     font-size: 24px;
     font-weight: 700;
@@ -42,13 +46,13 @@ body {
     text-decoration: underline;
 }
 .titulo-destaque{
-    color: rgb(13, 182, 239);
+    color: var(--cor-secundaria);
 }
 .strong-flamengo{
     color: rgb(255, 52, 52);
 }
 .habilidades-destaque{
-    color: rgb(4, 128, 170);
+    color: var(--cor-quaternaria);
 }
 .apresentacao__links__site{  
     /*  background-color: black; */
@@ -58,7 +62,7 @@ body {
     gap: 10px;
     width: 378px;
     text-align: center;
-    border: 2px solid #22D4FD;
+    border: 2px solid var(--cor-secundaria);
     border-radius: 8px;
     padding: 16px 0;
     font-size: 24px;
@@ -71,7 +75,7 @@ body {
 }
 .apresentacao__links__site:hover{
     transition: 0.5s;
-    background-color: #0F0E0E;
+    background-color: var(--cor-terciaria);
     transform: scale(1.03);
 }
 #about{
@@ -93,7 +97,7 @@ body {
     font-size: 36px;
     font-family: 'Krona One', sans-serif;
 }
-#flamengo{
+#flamengo-historia{
     font-size: 20px;
 }
 .apresentacao__conteudo__texto{
@@ -116,6 +120,9 @@ body {
 .img__grande{
     padding-block-end: 100px;
 }
+img{
+    filter: grayscale(100%);
+}
 .rodape{
     position: fixed;
     left: 0;
@@ -130,6 +137,7 @@ body {
     font-weight: 400;
 }
 .img__flamengo{
+    filter: grayscale(0%);
     width: 35%;
     height: 600px;
 }
