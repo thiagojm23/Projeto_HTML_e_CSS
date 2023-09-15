@@ -14,15 +14,16 @@ function toggleBackground() {
 const botaoChangeBackground = document.getElementById("change-bg");
 botaoChangeBackground.addEventListener("click", toggleBackground);
 
+/*Este efeito esta sendo aplicado apenas com CSS no id #change-bg:  active
 const botao = document.getElementById("change-bg");
 function buttonEffect() {
   botao.classList.add("efeito-clique");
   setTimeout(() => {
     botao.classList.remove("efeito-clique");
   }, 200);
-}
+}*/
 
-botao.addEventListener("click", buttonEffect);
+//botao.addEventListener("click", buttonEffect);
 
 const paragrafo = document.querySelector(".apresentacao__conteudo__texto");
 

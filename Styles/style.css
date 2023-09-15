@@ -30,6 +30,9 @@ body {
 #change-bg {
   will-change: transform;
   background-color: transparent;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   padding: 3px;
   border: 2px solid grey;
   border-radius: 8px;
@@ -40,7 +43,29 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-.efeito-clique {
+#change-bg:hover {
+  color: var(--cor-primaria);
+}
+#change-bg::after {
+  content: "";
+  background: var(--cor-terciaria);
+  position: absolute;
+  left: -100%;
+  right: 100%;
+  z-index: -1;
+  top: 0;
+  padding: 0.85em 0.75em;
+  display: block;
+  transition: all 0.35s;
+}
+#change-bg:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+#change-bg:active {
   transform: scale(1.02);
   transition: transform 200ms ease;
 }
