@@ -171,8 +171,25 @@ body {
   font-size: 36px;
   font-family: "Krona One", sans-serif;
 }
-#flamengo-historia {
+.flamengo.apresentacao__conteudo__texto {
   font-size: 20px;
+}
+.botaoVerMais {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--cor-primaria);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+#ver-mais {
+  overflow: hidden;
+  height: 25px;
+}
+.mostrarConteudo {
+  height: auto !important;
 }
 .apresentacao__conteudo__texto {
   font-size: 24px;

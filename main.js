@@ -1,3 +1,5 @@
+const url = window.location.href;
+
 const body = document.body;
 function changeBackground() {
   body.style.background = "black";
@@ -45,21 +47,24 @@ console.log(elemento[2].innerHTML);
 elemento[2].innerHTML = "Realizando um teste";
 console.log(elemento[2].innerHTML);*/
 
-const elementosRede = document.querySelectorAll(".apresentacao__links__site");
-const original0 = elementosRede[0].innerHTML;
-const original1 = elementosRede[1].innerHTML;
-const original2 = elementosRede[2].innerHTML;
-function alterarRedes() {
-  if (elementosRede[0].textContent == "Discord") {
-    console.log("teste23");
-    elementosRede[0].innerHTML = original0;
-    elementosRede[1].innerHTML = original1;
-    elementosRede[2].innerHTML = original2;
-  } else {
-    elementosRede[0].innerHTML = "Discord";
-    elementosRede[1].innerHTML = "Pinterest";
-    elementosRede[2].innerHTML = "PS Plus";
+if (url.includes("index.html")) {
+  const elementosRede = document.querySelectorAll(".apresentacao__links__site");
+  const original0 = elementosRede[0].innerHTML;
+  const original1 = elementosRede[1].innerHTML;
+  const original2 = elementosRede[2].innerHTML;
+  function alterarRedes() {
+    if (elementosRede[0].textContent == "Discord") {
+      //console.log("teste23");
+      elementosRede[0].innerHTML = original0;
+      elementosRede[1].innerHTML = original1;
+      elementosRede[2].innerHTML = original2;
+    } else {
+      elementosRede[0].innerHTML = "Discord";
+      elementosRede[1].innerHTML = "Pinterest";
+      elementosRede[2].innerHTML = "PS Plus";
+    }
   }
+
   /*Testando situações referente a classList.add
   if (elementosRede[0].classList.contains("strong-flamengo")) {
     console.log("teste1");
@@ -68,6 +73,17 @@ function alterarRedes() {
     console.log("testeThigas");
     elementosRede[0].classList.add("strong-flamengo");
   }*/
+
+  const botaoAlterarRede = document.querySelector(".redes");
+  botaoAlterarRede.addEventListener("click", alterarRedes);
 }
-const botaoAlterarRede = document.querySelector(".redes");
-botaoAlterarRede.addEventListener("click", alterarRedes);
+
+const paragrafoFlamengoEscondido = document.querySelector("#ver-mais");
+function mostrarConteudo() {
+  if (paragrafoFlamengoEscondido.classList.contains("mostrarConteudo")) {
+    paragrafoFlamengoEscondido.classList.remove("mostrarConteudo");
+  } else {
+    paragrafoFlamengoEscondido.classList.add("mostrarConteudo");
+  }
+}
+paragrafoFlamengoEscondido.addEventListener("click", mostrarConteudo);
