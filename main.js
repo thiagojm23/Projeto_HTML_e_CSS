@@ -78,12 +78,27 @@ if (url.includes("index.html")) {
   botaoAlterarRede.addEventListener("click", alterarRedes);
 }
 
-const paragrafoFlamengoEscondido = document.querySelector("#ver-mais");
+const verMais = document.querySelector(".botaoVerMais");
 function mostrarConteudo() {
+  const paragrafoFlamengoEscondido = document.querySelector("#ver-mais");
   if (paragrafoFlamengoEscondido.classList.contains("mostrarConteudo")) {
     paragrafoFlamengoEscondido.classList.remove("mostrarConteudo");
   } else {
     paragrafoFlamengoEscondido.classList.add("mostrarConteudo");
   }
 }
-paragrafoFlamengoEscondido.addEventListener("click", mostrarConteudo);
+verMais.addEventListener("click", mostrarConteudo);
+
+/*apenas testando a função setTimeout
+setTimeout(() => {
+  mostrarConteudo();
+}, 5000);
+setTimeout(function () {
+  mostrarConteudo();
+}, 10000);*/
+
+const foto = document.querySelectorAll(".img__flamengo");
+function mostrarDog() {
+  foto[1].classList.add("botaOpa");
+  foto[0].classList.add("tiraOpa");
+}
