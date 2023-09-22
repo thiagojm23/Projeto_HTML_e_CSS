@@ -174,7 +174,6 @@ body {
 .apresentacao {
   padding: 3% 15% 6% 20%;
   display: flex;
-  align-items: center;
   gap: 8%;
 }
 .apresentacao__conteudo {
@@ -250,14 +249,15 @@ body {
   height: 600px;
 }*/
 .imagens-about {
-  display: flex;
+  position: relative;
+  width: 650px;
+  height: 500px;
 }
 .imagens-about img {
   position: absolute;
   width: 650px;
   height: 500px;
   opacity: 0;
-  bottom: 20%;
 }
 .botaOpa {
   opacity: 1 !important;
@@ -265,9 +265,22 @@ body {
 .tiraOpa {
   opacity: 0 !important;
 }
+.carrossel {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 70px;
+}
 .thigas {
-  position: absolute;
-  top: 80%;
-  right: 50%;
-  background-color: #f8f0e5;
+  position: relative;
+  left: 240px;
+}
+.thigas span {
+  background-color: none;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #f8f0e5;
+  padding: 5px 5px 10px 30px;
+  border-radius: 15px;
+  margin: 10px;
 }
