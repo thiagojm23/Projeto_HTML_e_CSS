@@ -259,12 +259,6 @@ body {
   height: 500px;
   opacity: 0;
 }
-.botaOpa {
-  opacity: 1 !important;
-}
-.tiraOpa {
-  opacity: 0 !important;
-}
 .carrossel {
   display: flex;
   flex-direction: column;
@@ -276,7 +270,7 @@ body {
   left: 240px;
 }
 .thigas span {
-  background-color: none;
+  background-color: var(--cor-terciaria);
   border-style: solid;
   border-width: 5px;
   border-color: #f8f0e5;

@@ -98,7 +98,19 @@ setTimeout(function () {
 }, 10000);*/
 
 const foto = document.querySelectorAll(".img__flamengo");
-function mostrarDog() {
-  foto[1].classList.add("botaOpa");
-  foto[0].classList.add("tiraOpa");
-}
+let lastIndex = 0;
+
+foto.forEach((elemento, index) => {
+  document.querySelectorAll("span")[index].addEventListener("click", () => {
+    let ultimaImagem = document.querySelectorAll(".img__flamengo")[lastIndex];
+    let imagemAtual = document.querySelectorAll("img__flamengo")[index];
+
+    ultimaImagem.style.opacity = 0;
+    imagemAtual.style.opacity = 1;
+
+    document.querySelectorAll("span")[lastIndex].classList.remove("");
+    document.querySelectorAll("span")[index].classList.add("");
+
+    lastIndex = index;
+  });
+});
